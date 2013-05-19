@@ -1,0 +1,45 @@
+
+section.slide
+  h1 Welcome to Slimdeck!
+
+section.slide
+  .vcenter
+    h2 Pure Deck.js
+    textile:
+      At it's core, Slimdeck uses "Deck.js":http://imakewebthings.com/deck.js/ as is*.
+    small.muted
+      textile:
+        *Well, not completely as is. We stripped out non-layout CSS styling in favour of "Bootstrap":http://twitter.github.io/bootstrap/base-css.html defaults.
+
+section.slide
+  .vcenter
+    h2 Just add Slim
+    textile:
+      Slimdeck lets you write "Deck.js":http://imakewebthings.com/deck.js/ decks rapidly using the "Slim":http://slim-lang.com/ templating engine.
+
+      bc. section.slide
+        h2 Welcome to Slimdeck!
+        p Isn't this cool?
+
+section.slide
+  .vcenter
+    h2 Or whatever you prefer...
+    textile:
+      You can also pepper in textile (and many other formats) at will thanks to Slim's Embedded Engine support!
+
+      bc. h2 Here we're using Slim
+      textile:
+        And now we're using "Textile":http://redcloth.org/textile/!
+
+section.slide
+  .vcenter
+    textile:
+      h2. Get started
+
+      You'll need Ruby, Bundler and Git.
+
+      bc. git clone git@github.com:supermario/Slimdeck.git
+      cd Slimdeck
+      git submodule update
+      bundle
+      ruby app.rb

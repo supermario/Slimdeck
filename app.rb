@@ -1,15 +1,21 @@
 ﻿require 'rubygems'
 require 'sinatra'
 require 'slim'
+require 'RedCloth'
 require 'less'
 require 'coffee_script'
-require 'json'
 
 Slim::Engine.set_default_options :pretty => true, :tabsize => 2
 
 get '/' do
+  @decks = get_decks
   # theme our output with slim!
-  slim :index
+  slim :decks
+end
+
+get '/decks/*' do
+  deck = params[:splat].first
+  slim :"decks/#{deck}"
 end
 
 get '/css/*.css' do
@@ -29,4 +35,9 @@ not_found do
 end
 
 helpers do
+  def get_decks
+    Dir.entries("views/decks")
+      .select {|f| !File.directory? f}
+      .map! {|f| f[/(.*).slim/, 1] }
+  end
 end

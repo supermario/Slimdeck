@@ -1,0 +1,7 @@
+
+h2 Decks
+
+ul
+  - @decks.each do |deck|
+    li
+      a href="/decks/#{deck}" = deck

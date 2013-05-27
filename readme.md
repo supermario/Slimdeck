@@ -18,4 +18,10 @@ shotgun app.rb
 
 ## Writing a Deck
 
-Simply create a file for each deck in views/decks. See sample.slim to get started.
+Simply create a file for each deck in views/decks. See views/decks/sample.slim to get started.
+
+## Compiling a static version
+
+Need a portable static HTML version of your decks, perhaps to carry on a USB as a backup?
+
+Run ./build_static.sh to compile a static version into static/, then copy folder as desired and run index.html for slides.

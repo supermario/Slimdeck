@@ -14,8 +14,9 @@ get '/' do
 end
 
 get '/decks/*' do
-  deck = params[:splat].first
-  slim :"decks/#{deck}"
+  @deck = params[:splat].first
+  # Slimdeck!
+  slim :deck
 end
 
 get '/css/*.css' do

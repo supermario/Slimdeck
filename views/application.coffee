@@ -1,3 +1,2 @@
 
 jQuery ->
-  $.deck('.slide')
